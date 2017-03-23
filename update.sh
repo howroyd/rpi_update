@@ -8,6 +8,7 @@ sudo apt-get -f -y dist-upgrade
 sudo dpkg --configure -a
 sudo apt-get -y autoremove
 sudo PRUNE_MODULES=1 rpi-update
+git pull && npm install
 
 echo "Done!"
 
