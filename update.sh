@@ -3,10 +3,11 @@ clear
 
 echo "Updating..."
 
+sudo ntpdate -u ntp.ubuntu.com
 sudo apt-get update
-sudo apt-get -f -y dist-upgrade
+sudo apt-get -y --force-yes dist-upgrade
 sudo dpkg --configure -a
-sudo apt-get -y autoremove
+sudo apt-get -y --force-yes autoremove
 sudo PRUNE_MODULES=1 rpi-update
 
 echo "Done!"
