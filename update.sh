@@ -7,9 +7,9 @@ sudo ntpdate -u ntp.ubuntu.com
 sudo apt-get update
 sudo apt-get -y --force-yes dist-upgrade
 sudo dpkg --configure -a
-sudo apt-get -y --force-yes autoremove
-sudo mv /boot/.firmware_revision ~
-sudo PRUNE_MODULES=1 rpi-update -y
+sudo apt-get -y autoremove
+sudo PRUNE_MODULES=1 rpi-update
+git pull && npm install
 
 echo "Done!"
 
